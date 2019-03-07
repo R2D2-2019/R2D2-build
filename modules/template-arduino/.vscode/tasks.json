@@ -18,7 +18,7 @@
             ],
 
             "windows": {
-                "command": "../../../programs/bmptk/tools/bmptk-make.exe",
+                "command": "bmptk-make run",
             },
 
             "linux": {
@@ -37,7 +37,7 @@
             ],
 
             "windows": {
-                "command": "../../../programs/bmptk/tools/bmptk-make.exe clean build",
+                "command": "bmptk-make clean build",
             },
 
             "linux": {
@@ -56,7 +56,7 @@
             ],
 
             "windows": {
-                "command": "../../../programs/bmptk/tools/bmptk-make.exe run",
+                "command": "bmptk-make run",
             },
 
             "linux": {
