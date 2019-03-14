@@ -5,6 +5,7 @@ settings.json
 # un ignore certain items in the modules directory and programs directory
 !/modules/template-arduino
 !/modules/template-native
+!/modules/template-pi
 !/modules/.vscode
 !/modules/.clang-format
 !/programs/bmptk

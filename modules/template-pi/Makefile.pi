@@ -1,0 +1,16 @@
+.phony: build clean build_linux build_windows
+
+WiringPiPath := ../../../libraries/WiringPi/wiringPi/
+WiringPiSource := $(wildcard $(WiringPiPath)*.c)
+WiringPiHeaders := $(wildcard $(WiringPiPath)*.h)
+ifeq ($(OS),Windows_NT)
+	g++ := armv8-rpi3-linux-gnueabihf-g++
+else
+	g++ := arm-linux-gnueabihf-g++
+endif
+
+build:
+	$(g++) -std=c++17 main.cpp $(SOURCES) $(HEADERS) -I $(WiringPiPath) -L$(WiringPiPath) -l:libwiringPi.so.2.50 -o main.exe
+		
+clean:
+	rm main
